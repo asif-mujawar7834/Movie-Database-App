@@ -1,0 +1,116 @@
+.banner {
+  /* background-image: url("../../../assets/Images/bg.jpg"); */
+  height: 450px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background-size: cover;
+  background-position: center center;
+  color: white;
+  position: relative;
+  background-image: linear-gradient(to bottom, transparent, #474f7a);
+}
+
+.banner__overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.banner__contents {
+  position: relative;
+  z-index: 1;
+  padding: 20px;
+}
+
+.banner__title {
+  font-size: 3rem;
+  font-weight: bold;
+}
+
+.banner__paragraph {
+  font-size: 1.3rem;
+  margin-bottom: 20px;
+}
+
+.banner__input__container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.banner__search {
+  padding: 10px;
+  font-size: 1.2rem;
+  border: none;
+  outline: none;
+  border-top-left-radius: 20px;
+  border-bottom-left-radius: 20px;
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  padding-left: 20px;
+}
+
+.banner__search::placeholder {
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.banner__button {
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  padding: 10px 20px;
+  font-size: 1.2rem;
+  background-image: linear-gradient(to right, #132043, #4663b3);
+  background-color: #132043;
+
+  color: white;
+  border: none;
+  outline: none;
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
+  cursor: pointer;
+}
+
+.banner__button:hover {
+  background-color: #0056b3;
+}
+
+.banner__faded__effect {
+  height: 180px;
+  width: 100%;
+  background: linear-gradient(to bottom, transparent, #132043);
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+
+/* Media queries for responsiveness */
+@media screen and (max-width: 768px) {
+  .banner {
+    height: 400px; /* Decrease height on smaller screens */
+  }
+
+  .banner__title {
+    font-size: 2rem; /* Decrease font size on smaller screens */
+  }
+
+  .banner__paragraph {
+    font-size: 1rem;
+  }
+
+  .banner__search {
+    font-size: 1rem; /* Decrease input font size on smaller screens */
+  }
+
+  .banner__button {
+    font-size: 1rem;
+  }
+}

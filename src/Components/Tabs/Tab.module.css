@@ -1,0 +1,36 @@
+.tabcontainer {
+  display: flex;
+  align-items: center;
+  width: 200px;
+  background-color: white;
+  border-radius: 20px;
+  overflow: hidden;
+  padding: 4px;
+}
+
+.tabcontainer button {
+  width: 100px;
+  padding: 10px;
+  border-radius: 7px;
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+  font-size: 14px;
+  font-style: normal;
+  background-color: transparent;
+  color: black;
+  font-weight: bold;
+  border: none;
+  cursor: pointer;
+}
+
+.tabcontainer button.active {
+  background-color: #0a1d56;
+  color: white;
+  border-radius: 20px;
+}
+
+@media screen and (max-width: 600px) {
+  .tabcontainer {
+    width: 150px;
+  }
+}

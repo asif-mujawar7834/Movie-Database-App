@@ -1,0 +1,161 @@
+.container {
+  transition: all 0.5s;
+  overflow-x: hidden;
+  margin-top: 20px;
+  position: relative;
+}
+
+.scrollContainer {
+  display: flex;
+  overflow-x: auto;
+  width: 100%;
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* IE and Edge */
+  scroll-behavior: smooth; /* Smooth scrolling */
+}
+
+.scrollContent {
+  display: flex;
+  gap: 10px;
+}
+
+.item {
+  width: 200px;
+  height: 300px;
+  border-radius: 7px;
+  position: relative;
+  transition: 0.5s;
+  cursor: pointer;
+}
+
+.item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.item:hover {
+  transform: scale(1.1);
+}
+
+.button {
+  background-color: white;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  position: absolute;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.left {
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.right {
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.textblock {
+  margin-top: 25px;
+}
+
+.textblock span {
+  display: block;
+}
+
+.textblock span:first-child {
+  font-family: "Roboto", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.textblock span:nth-child(2) {
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+}
+
+.progress__container {
+  position: absolute;
+  bottom: 0;
+  transform: translateY(50%);
+}
+
+.skeleton__container {
+  width: 200px;
+}
+
+.skeleton {
+  background-color: #e6e6e6;
+  border-radius: 4px;
+  animation: skeleton-animation 1s infinite;
+  opacity: 0.5;
+}
+
+.skeleton.image {
+  width: 100%;
+  height: 100%; /* Adjust this value as per your image height */
+}
+
+.skeleton.title {
+  width: 50%; /* Adjust this value as per your title width */
+  height: 16px;
+}
+
+.skeleton.date {
+  width: 30%; /* Adjust this value as per your date width */
+  height: 16px;
+}
+
+@keyframes skeleton-animation {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .item {
+    width: 150px;
+    height: 250px;
+    border-radius: 7px;
+  }
+
+  .button {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .item {
+    width: 120px;
+    height: 220px;
+    border-radius: 7px;
+  }
+
+  .textblock span:first-child {
+    font-family: "Roboto", sans-serif;
+    font-weight: 600;
+    font-style: normal;
+    font-size: 15px;
+  }
+
+  .textblock span:nth-child(2) {
+    font-family: "Roboto", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    font-size: 12px;
+  }
+}

@@ -1,0 +1,12 @@
+.container {
+  margin-top: 100px;
+  margin-bottom: 30px;
+  color: white;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, 200px);
+  grid-column-gap: 10px;
+  grid-row-gap: 40px;
+}
